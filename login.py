@@ -23,9 +23,16 @@ def main():
     
     
     if user_option=='Sign-Up':
+        st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
         st.header("Haven't Sign up yet?")
         sign_up_username = st.text_input("Enter your college roll number: ",'20L31A54')
         name = st.text_input("What is your name ?  ")
+        lateral = st.radio("Are You a Lateral Entry ?",("No, i'm not","Yes, I am"),key='islateral')
+        if lateral == "Yes,I am":
+            lateral = True
+        else:
+            lateral = False
+        department = st.radio("What's Your Department ?",("Ai&DS","CSE",'ECE'),key='dept')
         sign_up_password = st.text_input("Enter Your Password :  ",type="password")
         user_uploaded_dp = st.file_uploader("Upload you Profile Picture [square pictures are recommended]   (*optional) ")
         create_acc = st.button("Create My Account")
@@ -38,6 +45,8 @@ def main():
             new_user_data = {"User name":f"{sign_up_username}",
                         "Password": f"{sign_up_password}",
                         f'{sign_up_username}':f'{name}',
+                        'IsLateral':lateral,
+                        'department':f'{department}',
                         "ID": f"{ids + 1}"
                         }
 
