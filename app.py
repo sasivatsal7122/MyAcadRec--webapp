@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import json
+from PIL import Image
 from streamlit_option_menu import option_menu
 
 
@@ -19,6 +20,7 @@ def main():
         st.header("Haven't Sign up yet?")
         sign_up_username = st.text_input("Enter your college roll number: ",'20L31A5413')
         sign_up_password = st.text_input("Enter Your Password :  ",type="password")
+        user_uploaded_dp = st.file_uploader("Upload you Profile Picture [square pictures are recommended]   (*optional) ")
         create_acc = st.button("Create My Account")
         if create_acc:
             f = open('user_creds/users_cred.json')
@@ -37,6 +39,10 @@ def main():
                 file_data.update(log_in_creds)
                 file.seek(0)
                 json.dump(file_data, file, indent = 4)
+            if user_uploaded_dp:
+                user_uploaded_dp = Image.open(user_uploaded_dp)
+                user_uploaded_dp = user_uploaded_dp.resize((180,180),Image.ANTIALIAS)
+                user_uploaded_dp.save(f"user_dp/{sign_up_username}.jpg",optimize=True,quality=95)
             st.balloons()
             st.success("Your Account Has been created Successfully...")        
     else:
