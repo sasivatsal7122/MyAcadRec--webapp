@@ -80,6 +80,7 @@ def main():
                         with open('user_creds/temp_login.json', 'w') as f:
                             json.dump(login_session, f)
                         st.success("User Authenctication Success..Redirecting to Dashboard..")
+                        
                         break
                     else:
                         st.error("Wrong Password...User Authenctication Failed")

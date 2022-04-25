@@ -72,8 +72,11 @@ def Dashboard():
         
         def edit_data(semdf,course_title,grade):
             i = semdf.index[semdf['Course Title']==course_title].tolist()
-            semdf.at[i[0],'Your Grade'] = grade
-            return semdf
+            try:
+                semdf.at[i[0],'Your Grade'] = grade
+                return semdf
+            except:
+                return semdf
         
         def save_data():
             super_dict = {};superrr_dict ={}
@@ -91,7 +94,7 @@ def Dashboard():
         with st.expander("Semester-1 Record"):
         
             def add_data(sem_df,i):
-                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text1')
+                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text1').upper()
                 sem_df.at[i,'Your Grade'] = grade
                 return sem_df
             
@@ -109,7 +112,7 @@ def Dashboard():
                 course_title,grade = st.text_input("Course Title and new grade to edit :",f"{sub_name['Course Title']},O",key='edit1').split(',')
                 edit_btn = st.button("Edit Changes",key='edit1')
                 if edit_btn:
-                    sem_1_df = edit_data(sem_1_df,course_title,grade)
+                    sem_1_df = edit_data(sem_1_df,course_title,grade.title())
                 save_data()
                 st.dataframe(sem_1_df)
             if xx['Your Grade']=='-':
@@ -121,7 +124,7 @@ def Dashboard():
         with st.expander("Semester-2 Record"):
             
             def add_data(sem_df,i):
-                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text2')
+                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text2').upper()
                 sem_df.at[i,'Your Grade'] = grade
                 return sem_df
             
@@ -139,7 +142,7 @@ def Dashboard():
                 course_title,grade = st.text_input("Course Title and new grade to edit :",f"{sub_name['Course Title']},O",key='edit2').split(',')
                 edit_btn = st.button("Edit Changes",key='edit2')
                 if edit_btn:
-                    sem_2_df = edit_data(sem_2_df,course_title,grade)
+                    sem_2_df = edit_data(sem_2_df,course_title,grade.title())
                 save_data()
                 st.dataframe(sem_2_df)
             if xx['Your Grade']=='-':
@@ -151,7 +154,7 @@ def Dashboard():
         with st.expander("Semester-3 Record"):
             
             def add_data(sem_df,i):
-                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text3')
+                grade = st.text_input(f"Enter Your Grade for {row['Course Title']}: ",key='text3').upper()
                 sem_df.at[i,'Your Grade'] = grade
                 return sem_df
             
@@ -169,7 +172,7 @@ def Dashboard():
                 course_title,grade = st.text_input("Course Title and new grade to edit :",f"{sub_name['Course Title']},O",key='edit3').split(',')
                 edit_btn = st.button("Edit Changes",key='edit3')
                 if edit_btn:
-                    sem_3_df = edit_data(sem_3_df,course_title,grade)
+                    sem_3_df = edit_data(sem_3_df,course_title,grade.title())
                 save_data()
                 st.dataframe(sem_3_df)
             
@@ -192,6 +195,7 @@ def Dashboard():
                 fp.seek(0)
                 json.dump(superrr_dict,fp,indent = 4)
             st.success("Your Data Has Been Successufully updated in the DataBase")
+            st.experimental_rerun()
             
 
     elif user_option=='Analytics':
