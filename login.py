@@ -56,10 +56,51 @@ def main():
                 file_data.update(log_in_creds)
                 file.seek(0)
                 json.dump(file_data, file, indent = 4)
+            
             if user_uploaded_dp:
                 user_uploaded_dp = Image.open(user_uploaded_dp)
                 user_uploaded_dp = user_uploaded_dp.resize((200,200),Image.ANTIALIAS)
                 user_uploaded_dp.save(f"user_dp/{sign_up_username}.jpg",optimize=True,quality=95)
+            isdir = os.path.isdir(f"user_record/aids/{sign_up_username}")
+            if isdir!=True:
+                os.mkdir(f"user_record/aids/{sign_up_username}")
+            
+            global sem1_mid,sem2_mid,sem3_mid
+            f = open('template/aids/sem1_mid_template.json')
+            sem1_mid = json.load(f)
+            f = open('template/aids/sem2_mid_template.json')
+            sem2_mid = json.load(f)
+            f = open('template/aids/sem3_mid_template.json')
+            sem3_mid = json.load(f)
+            
+            super_dict = {};superrr_dict ={}
+            for i in range(3):
+                xxx = globals()[f'sem{i+1}_mid']
+                temporay_dict = xxx
+                super_dict.update({f'sem{i+1}':temporay_dict})
+            superrr_dict.update({sign_up_username:super_dict})
+            with open(f'user_record/aids/{sign_up_username}/midterm.json', 'w') as fp:
+                fp.seek(0)
+                json.dump(superrr_dict,fp,indent = 4)
+            
+            
+            global sem1_weekly,sem2_weekly,sem3_weekly
+            f = open('template/aids/sem1_weekly_template.json')
+            sem1_weekly = json.load(f)
+            f = open('template/aids/sem2_weekly_template.json')
+            sem2_weekly = json.load(f)
+            f = open('template/aids/sem3_weekly_template.json')
+            sem3_weekly = json.load(f)
+            super_dict = {};superrr_dict ={}
+            for i in range(3):
+                xxx = globals()[f'sem{i+1}_weekly']
+                temporay_dict = xxx
+                super_dict.update({f'sem{i+1}':temporay_dict})
+            superrr_dict.update({sign_up_username:super_dict})
+            with open(f'user_record/aids/{sign_up_username}/weekly.json', 'w') as fp:
+                fp.seek(0)
+                json.dump(superrr_dict,fp,indent = 4)
+            
             st.balloons()
             st.success("Your Account Has been created Successfully...")        
     else:
