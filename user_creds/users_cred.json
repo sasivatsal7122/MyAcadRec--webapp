@@ -7,6 +7,14 @@
             "IsLateral": false,
             "department": "Ai&DS",
             "ID": "1"
+        },
+        {
+            "User name": "20L31A5419",
+            "Password": "mowli",
+            "20L31A5419": "Datla Sai Mowli",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "2"
         }
     ]
 }
