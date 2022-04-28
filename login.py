@@ -2,13 +2,12 @@ import streamlit as st
 import json
 from PIL import Image
 from streamlit_option_menu import option_menu
-import awesome_streamlit as ast
-import dashboard
 import json
 import os
 
 
 def main():
+    
     filePath ='user_creds/temp_login.json'
     if os.path.exists(filePath):
         os.remove(filePath)
@@ -65,16 +64,18 @@ def main():
             if isdir!=True:
                 os.mkdir(f"user_record/aids/{sign_up_username}")
             
-            global sem1_mid,sem2_mid,sem3_mid
+            global sem1_mid,sem2_mid,sem3_mid,sem4_mid
             f = open('template/aids/sem1_mid_template.json')
             sem1_mid = json.load(f)
             f = open('template/aids/sem2_mid_template.json')
             sem2_mid = json.load(f)
             f = open('template/aids/sem3_mid_template.json')
             sem3_mid = json.load(f)
+            f = open('template/aids/sem4_mid_template.json')
+            sem4_mid = json.load(f)
             
             super_dict = {};superrr_dict ={}
-            for i in range(3):
+            for i in range(4):
                 xxx = globals()[f'sem{i+1}_mid']
                 temporay_dict = xxx
                 super_dict.update({f'sem{i+1}':temporay_dict})
@@ -84,15 +85,18 @@ def main():
                 json.dump(superrr_dict,fp,indent = 4)
             
             
-            global sem1_weekly,sem2_weekly,sem3_weekly
+            global sem1_weekly,sem2_weekly,sem3_weekly,sem4_weekly
             f = open('template/aids/sem1_weekly_template.json')
             sem1_weekly = json.load(f)
             f = open('template/aids/sem2_weekly_template.json')
             sem2_weekly = json.load(f)
             f = open('template/aids/sem3_weekly_template.json')
             sem3_weekly = json.load(f)
+            f = open('template/aids/sem4_weekly_template.json')
+            sem4_weekly = json.load(f)
+            
             super_dict = {};superrr_dict ={}
-            for i in range(3):
+            for i in range(4):
                 xxx = globals()[f'sem{i+1}_weekly']
                 temporay_dict = xxx
                 super_dict.update({f'sem{i+1}':temporay_dict})
@@ -100,6 +104,9 @@ def main():
             with open(f'user_record/aids/{sign_up_username}/weekly.json', 'w') as fp:
                 fp.seek(0)
                 json.dump(superrr_dict,fp,indent = 4)
+                
+            with open(f'user_record/aids/{sign_up_username}/planner.db','w') as dbb:
+                pass
             
             st.balloons()
             st.success("Your Account Has been created Successfully...")        
@@ -120,6 +127,10 @@ def main():
                         login_session.update({username:name})
                         with open('user_creds/temp_login.json', 'w') as f:
                             json.dump(login_session, f)
+                        f.close()
+                        with open('user_creds/temp_login_2.json', 'w') as ff:
+                            json.dump(login_session, ff)
+                        ff.close()
                         st.success("User Authenctication Success..Redirecting to Dashboard..")
                         
                         break

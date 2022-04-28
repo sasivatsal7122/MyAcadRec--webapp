@@ -11,5 +11,3 @@ if choice=='Login':
    login.main()
 else:
     dashboard.Dashboard()
-
-
