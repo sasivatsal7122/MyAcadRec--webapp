@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import json
-from streamlit_option_menu import option_menu
 
 def run_mid_main(username):
     with open(f'user_record/aids/{username[0]}/midterm.json') as d:

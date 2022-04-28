@@ -11,8 +11,10 @@ from streamlit_option_menu import option_menu
 import middashboard
 import semdashbord
 import weeklydashboard
+import planner
 
 def Dashboard():
+    
     logcondition = False
 
     try:
@@ -60,7 +62,9 @@ def Dashboard():
             pass
         
         else:
-            pass
+            #pass
+            planner.run_plannerapp()
+    
     else:
         pass
    

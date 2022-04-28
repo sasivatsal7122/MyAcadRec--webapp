@@ -2,13 +2,12 @@ import streamlit as st
 import json
 from PIL import Image
 from streamlit_option_menu import option_menu
-import awesome_streamlit as ast
-import dashboard
 import json
 import os
 
 
 def main():
+    
     filePath ='user_creds/temp_login.json'
     if os.path.exists(filePath):
         os.remove(filePath)
@@ -105,6 +104,9 @@ def main():
             with open(f'user_record/aids/{sign_up_username}/weekly.json', 'w') as fp:
                 fp.seek(0)
                 json.dump(superrr_dict,fp,indent = 4)
+                
+            with open(f'user_record/aids/{sign_up_username}/planner.db','w') as dbb:
+                pass
             
             st.balloons()
             st.success("Your Account Has been created Successfully...")        
@@ -125,6 +127,10 @@ def main():
                         login_session.update({username:name})
                         with open('user_creds/temp_login.json', 'w') as f:
                             json.dump(login_session, f)
+                        f.close()
+                        with open('user_creds/temp_login_2.json', 'w') as ff:
+                            json.dump(login_session, ff)
+                        ff.close()
                         st.success("User Authenctication Success..Redirecting to Dashboard..")
                         
                         break

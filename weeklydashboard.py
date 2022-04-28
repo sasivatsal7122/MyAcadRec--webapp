@@ -45,7 +45,7 @@ def run_weekly_main(username,name):
     
     with st.expander("Semester - 1 Weekly Test Record"):
         sub_name = sem_1_weekly_df.iloc[1]
-        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,18",key='weekly-1')).split(',')
+        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,10",key='weekly-1')).split(',')
         wedit_btn = st.button("Edit Changes",key='weekly-1')
         if wedit_btn:
             try:
@@ -57,7 +57,7 @@ def run_weekly_main(username,name):
 
     with st.expander("Semester - 2 Weekly Test Record"):
         sub_name = sem_2_weekly_df.iloc[1]
-        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,18",key='weekly-2')).split(',')
+        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,10",key='weekly-2')).split(',')
         wedit_btn = st.button("Edit Changes",key='weekly-2')
         if wedit_btn:
             try:
@@ -69,7 +69,7 @@ def run_weekly_main(username,name):
 
     with st.expander("Semester - 3 Weekly Test Record"):
         sub_name = sem_3_weekly_df.iloc[1]
-        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,18",key='weekly-3')).split(',')
+        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,10",key='weekly-3')).split(',')
         wedit_btn = st.button("Edit Changes",key='weekly-3')
         if wedit_btn:
             try:
@@ -82,7 +82,7 @@ def run_weekly_main(username,name):
         
     with st.expander("Semester - 4 Weekly Test Record"):
         sub_name = sem_4_weekly_df.iloc[1]
-        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,18",key='weekly-4')).split(',')
+        sub,mid,marks = str(st.text_input("Enter Sub-Name, Weekly - w1 or w2 or...w6, marks : ",f"{sub_name['Course Title']},w1,10",key='weekly-4')).split(',')
         wedit_btn = st.button("Edit Changes",key='weekly-4')
         if wedit_btn:
             try:
