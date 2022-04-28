@@ -56,6 +56,7 @@ def run_sem_main(username):
             semdf.at[i[0],'Your Grade'] = grade
             return semdf
         except:
+            st.warning("You Entered Wrong Options, Check and Try Again")
             return semdf
     
     def save_data():
