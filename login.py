@@ -1,3 +1,4 @@
+from matplotlib.style import use
 import streamlit as st
 import json
 from PIL import Image
@@ -34,6 +35,8 @@ def main():
         department = st.radio("What's Your Department ?",("Ai&DS","CSE",'ECE'),key='dept')
         sign_up_password = st.text_input("Enter Your Password :  ",type="password")
         user_uploaded_dp = st.file_uploader("Upload you Profile Picture [square pictures are recommended]   (*optional) ")
+        if user_uploaded_dp:
+            st.info("Not gonna lie you look stunning..")
         create_acc = st.button("Create My Account")
         if create_acc:
             f = open('user_creds/users_cred.json')
@@ -57,9 +60,12 @@ def main():
                 json.dump(file_data, file, indent = 4)
             
             if user_uploaded_dp:
-                user_uploaded_dp = Image.open(user_uploaded_dp)
-                user_uploaded_dp = user_uploaded_dp.resize((200,200),Image.ANTIALIAS)
-                user_uploaded_dp.save(f"user_dp/{sign_up_username}.jpg",optimize=True,quality=95)
+                try:
+                    user_uploaded_dp = Image.open(user_uploaded_dp)
+                    user_uploaded_dp = user_uploaded_dp.resize((200,200),Image.ANTIALIAS)
+                    user_uploaded_dp.save(f"user_dp/{sign_up_username}.jpg",optimize=True,quality=95)
+                except:
+                    st.error("Uploaded Image Format is not supported, try uploading another image")
             isdir = os.path.isdir(f"user_record/aids/{sign_up_username}")
             if isdir!=True:
                 os.mkdir(f"user_record/aids/{sign_up_username}")
@@ -142,6 +148,3 @@ def main():
                     continue
                 else:
                     st.error(f"No User found with user name '{username}', try sign-up")
-              
-if __name__=="__main__":
-    main()

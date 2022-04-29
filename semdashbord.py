@@ -4,6 +4,7 @@ import json
 import os
 import os.path
 import time
+import difflib
 
 
 def run_sem_main(username):
@@ -50,6 +51,9 @@ def run_sem_main(username):
                 sem_3_df.drop(['Column1'],axis=1,inplace=True)
     
     def edit_data(semdf,course_title,grade):
+        sub_name_ls = semdf['Course Title'].tolist()
+        sub_name_ls = sorted(sub_name_ls, key=lambda x: difflib.SequenceMatcher(None, x,course_title).ratio())
+        sub = sub_name_ls[-1]
         i = semdf.index[semdf['Course Title']==course_title].tolist()
         try:
             semdf.at[i[0],'Your Grade'] = grade
