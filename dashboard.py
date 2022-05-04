@@ -12,6 +12,7 @@ import middashboard
 import semdashbord
 import weeklydashboard
 import planner
+import semanaltics
 
 def Dashboard():
     
@@ -78,7 +79,9 @@ def Dashboard():
             
             
         elif user_option=='Analytics':
-            pass
+            user_analytic_choice = st.selectbox("Choose one ",['Semster','Mid-Term','Weekly'])
+            if user_analytic_choice=='Semster':
+                semanaltics.run_semester_analytics(username[0])
         
         else:
             #pass
