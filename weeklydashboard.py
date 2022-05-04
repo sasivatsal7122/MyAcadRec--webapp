@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import json
-
+import difflib
 
 def run_weekly_main(username,name):
     st.info(f"Hey {name[0]} we suggest wide mode for this specific section for better usability and visibility")
@@ -35,6 +35,9 @@ def run_weekly_main(username,name):
     
     wdict = {'w1':'Weekly-1','w2':'Weekly-2','w3':'Weekly-3','w4':'Weekly-4','w5':'Weekly-5','w6':'Weekly-6'}
     def edit(df,sub,mid,marks):
+        sub_name_ls = df['Course Title'].tolist()
+        sub_name_ls = sorted(sub_name_ls, key=lambda x: difflib.SequenceMatcher(None, x,sub).ratio())
+        sub = sub_name_ls[-1]
         i = df.index[df['Course Title']==sub].tolist()
         try:
             df.at[i[0],wdict.get(mid)] = marks

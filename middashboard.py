@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import json
+import difflib
+
 
 def run_mid_main(username):
     with open(f'user_record/aids/{username[0]}/midterm.json') as d:
@@ -33,6 +35,9 @@ def run_mid_main(username):
     
     mdict = {'m1':'Mid-Term-1','m2':'Mid-Term-2'}
     def edit(df,sub,mid,marks):
+        sub_name_ls = df['Course Title'].tolist()
+        sub_name_ls = sorted(sub_name_ls, key=lambda x: difflib.SequenceMatcher(None, x,sub).ratio())
+        sub = sub_name_ls[-1]
         i = df.index[df['Course Title']==sub].tolist()
         try:
             df.at[i[0],mdict.get(mid)] = marks
