@@ -45,4 +45,16 @@
   
  https://user-images.githubusercontent.com/71326149/171015001-ac771daa-d0de-463b-bd20-3f5e366369e3.mp4
 
+# Challenges and the Hustle
+ - ### More then making a WebApp which can be used day to day i made My Acad Rec as a Personal Challenge given to me by me
+ - ### The Challenge is to create 
+   - #### A WebApp entirely from Python 
+   - #### The WebApp should be Dynamic and Full-Stack with all CRUD Operations
+   - #### Should not use a database or integrate an external Database
+   - #### Make an Authenticated Sign-Up & Sign-In System in streamlit itself
+   - #### Validate/Authenticate Users when they Sign-in 
+   - #### Should contain all the operations as a Full-Stack app 
+   - #### The entire app should be made under 1500 lines ( final version exceeded >1700 lines)
+   - #### A App which had rich UI/UX and zero functionality errors
+ - ### The Motto behind to not to use a database is to challenge the logical side of me, with a database like sql lite3 things are so easy the entire app can be made in a week with zero scope of errors or crashes, the struggle come with no database to store or request data. With no database the work of getting,saving,storing,accessing and requesting data becomes so sensitive and difficult. Why the Struggle you ask..idk...why do people still use vanilla CSS when there are frameworks which make life easier like tailwind css, bootstrap ?! it's just how it is.
 
