@@ -15,8 +15,13 @@
 ## After Sign-in Your Dashboard looks like this:
 
   ### Navigate through Different option from the Horizontal NavBar
+  <p align="center"><img src="static/home.png" width="100%" ></p>
   <p align="center"><img src="static/dashboard.gif" width="100%" ></p>
 
+## If you are your new user enter your data or if your an existing user you edit your previously entered data or enter new data
+ <p align="center"><img src="static/editing.gif" width="100%" ></p>
+ 
+ 
   ## Detailed Analytics can be viewed in the analtics sention
   <p align="center"><img src="static/analytics.gif" width="100%" ></p>
 
