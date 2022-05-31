@@ -57,6 +57,34 @@
    - #### The entire app should be made under 1500 lines ( final version exceeded >1700 lines ).
    - #### A App which has rich UI/UX and zero functionality errors.
 
+ ## Working Demonstration:
+ ### As soon as the user creates an account for the 1st time a new folder is generated with his roll number autonomously and empty template files are added into the folder which can be filled by the user once he logs in, once filled the file structure changes and content loaded in the next login section changes, options available during the intial login will not be displayed if the system checks the intial "empty" template files are filled
+ 
+ https://user-images.githubusercontent.com/71326149/171221065-2554e1e4-31ef-4428-ba3e-921d3e122f4d.mp4
+ 
+ ## For Intial login Options looks like this:
+ 
+ https://user-images.githubusercontent.com/71326149/171226344-fabd17eb-584f-47aa-b572-1abd0729af7b.mp4
+
+ ## After every other login apps stops showing you necessary options shwon during your 1st time login, 2nd Login on wards it looks like this
+ 
+ https://user-images.githubusercontent.com/71326149/171226685-118e560d-05ca-4fa8-8dd2-864016887c79.mp4
+
+ ## If the user chooses to add a DP , the uploaded image is collected resized and compressed with minimal resolution loss and stored with a name same as roll number
+ 
+ https://user-images.githubusercontent.com/71326149/171222148-3fd60173-069d-4952-b8fe-bda5b043194b.mp4
+ 
+ ## If you choose Lateral during sign up you wont see semster-1 and semster-2 , it starts from semester-3 
+ ## For every new Semester or change in the curriculum, base template should be added or edited depending upoun the change in the <a href="https://github.com/sasivatsal7122/MyAcadRec--webapp/tree/main/template/aids">Templates dir</a> so that the new users as well as the current users data is not lost and updated as per the time, the only manual thing to do is editing the template during curriculum changes rest all the operations are autonomous.
+ 
+ ### In case if the user chooses not to upload any DP for the 1st time by default <a href="https://github.com/sasivatsal7122/MyAcadRec--webapp/blob/main/template/boo.jpg">"boo.jpg"</a> from the template dir is saved, later he can change it once logged in.
+
+
+ 
+
+ 
+ 
+ 
  - ### The Motto behind to not to use a database is to challenge the logical side of me, with a database like sql lite3 things are so easy the entire app can be made in a week with zero scope of errors or crashes with little or no efforts, the real struggle is to create one that requires a database to store or request data without using a database. With no database the work of getting,saving,storing,accessing and requesting data becomes so sensitive and difficult. Why the Struggle you ask..idk...why do people still use vanilla CSS when there are frameworks which make life easier like tailwind css, bootstrap ?! it's just how it is. Somehow after spending close to 20days i finnaly managed to complete it on my own without help of an online tutorial or some sort of resource,I feel glad that there is no streamlit app in the entire internet which is full stack and has accouting system without a CMS(content mangement system) and ORM(Object–relational mapping), "My AcadRec" is a fully functional Dynamic web app which provides content based on the user who logged in, the best thing is that it all does this without frontend-scripting-backend languages support. 
  
  # Note:
