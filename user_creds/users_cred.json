@@ -15,6 +15,38 @@
             "IsLateral": false,
             "department": "Ai&DS",
             "ID": "2"
+        },
+        {
+            "User name": "20L31A5413",
+            "Password": "imsasi",
+            "20L31A5413": "Satya Sasi Vatsal",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "3"
+        },
+        {
+            "User name": "20L31A5444",
+            "Password": "immonish",
+            "20L31A5444": "Monish Nekkala",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "4"
+        },
+        {
+            "User name": "20L31A5445",
+            "Password": "immonish",
+            "20L31A5445": "blah blah",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "5"
+        },
+        {
+            "User name": "20L31A5444",
+            "Password": "immonish",
+            "20L31A5444": "Monish nekkala",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "6"
         }
     ]
 }

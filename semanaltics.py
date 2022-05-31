@@ -8,7 +8,7 @@ import streamlit as st
 
 
 def run_semester_analytics(username):
-    sem_c = st.slider("Select no.of Semesters",1,8,4)
+    sem_c = st.slider("Select no.of Semesters",1,8,3)
     if sem_c:
         with open(f'user_record/aids/{username}/sem.json','r') as fp:
             main_data = json.load(fp)
