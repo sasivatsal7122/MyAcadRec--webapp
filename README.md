@@ -6,7 +6,7 @@
 #### The moto of making this app is i personally feel unanswerable to myself where i'm lacking or whether is there any improvement or consistency in my perfromance compared to the last semester, why care you ask coz these little things matter in the end and we are just too lazy to enter those marks in a physical diary or keep record of them and carry, now..whats the better way of doing it?.. the solution is a web app which can be accessed anywhere on any device any time and there is no question of loosing the log cause eveything is digital as it should be in 21st century. 
   
  # How to Use the App:
-## If you haven't sign up yet feel free to craete an account
+## If you haven't sign up yet feel free to create an account
 <p align="center"><img src="static/signup.png" width="100%" ></p>
 
 ## After creating an account, sign in into your account 
