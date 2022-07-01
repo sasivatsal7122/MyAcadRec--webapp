@@ -14,7 +14,7 @@ def main():
         os.remove(filePath)
     
     st.title("Welcome to My Academic Record")
-    st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/sasivatsal7122'>B.Sasi Vatsal</a></TT></p>", unsafe_allow_html=True)
+    st.markdown("<p><TT>Designed and Developed by <a style='text-decoration:none;color:red' target='_blank' href='https://github.com/sasivatsal7122'>Team-HighVoltage</a></TT></p>", unsafe_allow_html=True)
     st.caption("20L31A5413 , Department of AI&DS")
     
     user_option = option_menu(None, ["Sign-In", "Sign-Up"], 
