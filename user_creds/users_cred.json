@@ -47,6 +47,22 @@
             "IsLateral": false,
             "department": "Ai&DS",
             "ID": "6"
+        },
+        {
+            "User name": "20L31A5444",
+            "Password": "immonish",
+            "20L31A5444": "Monish nekkala",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "7"
+        },
+        {
+            "User name": "20L31A5430",
+            "Password": "ritesh",
+            "20L31A5430": "Janga Ritesh",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "8"
         }
     ]
 }

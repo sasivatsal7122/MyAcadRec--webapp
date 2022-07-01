@@ -1,0 +1,128 @@
+{
+    "20L31A5430": {
+        "sem1": {
+            "Course Code": {
+                "0": "1000201106",
+                "1": "1000201|107",
+                "2": "1000201102",
+                "3": "1005201100",
+                "4": "1003201100",
+                "5": " 1000201108 "
+            },
+            "Course Title": {
+                "0": "Calculus",
+                "1": "Linear Algebra And Matrix Ananlysis",
+                "2": "Technical English Communication",
+                "3": "Problem Solving And Programming Using C",
+                "4": "Engineering Mechanics",
+                "5": "Physics of Materials"
+            },
+            "Mid-Term-1": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--",
+                "5": "--"
+            },
+            "Mid-Term-2": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--",
+                "5": "--"
+            }
+        },
+        "sem2": {
+            "Course Code": {
+                "0": "1000201205",
+                "1": "1005201203",
+                "2": "1005201201",
+                "3": "1005201202"
+            },
+            "Course Title": {
+                "0": "Statistics for Data Science-I ",
+                "1": "Data Structures",
+                "2": "Computer Organization",
+                "3": "Web Design"
+            },
+            "Mid-Term-1": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--"
+            },
+            "Mid-Term-2": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--"
+            }
+        },
+        "sem3": {
+            "Course Code": {
+                "0": "1000202103",
+                "1": "1054202100",
+                "2": "1005202104",
+                "3": "1005202202",
+                "4": "1000202100"
+            },
+            "Course Title": {
+                "0": "Statistics for Data Science-II",
+                "1": "Data Engineering",
+                "2": "Programming Essentials in Python",
+                "3": "Software Engineering",
+                "4": "Discrete Mathematical Structures"
+            },
+            "Mid-Term-1": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--"
+            },
+            "Mid-Term-2": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--"
+            }
+        },
+        "sem4": {
+            "Course Code": {
+                "0": "1005202101",
+                "1": "1054202200",
+                "2": "1005202103",
+                "3": "1005202204",
+                "4": "1099202100",
+                "5": " 1005202111 "
+            },
+            "Course Title": {
+                "0": "Operating Systems",
+                "1": "Artificial Intelligence",
+                "2": "Design and Analysis of Algorithms",
+                "3": "Data Warehousing and Data Mining",
+                "4": "Managerial Economics and Financial Analysis",
+                "5": "Operating Systems Lab"
+            },
+            "Mid-Term-1": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--",
+                "5": "--"
+            },
+            "Mid-Term-2": {
+                "0": "--",
+                "1": "--",
+                "2": "--",
+                "3": "--",
+                "4": "--",
+                "5": "--"
+            }
+        }
+    }
+}
