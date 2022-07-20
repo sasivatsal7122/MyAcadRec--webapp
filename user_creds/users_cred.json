@@ -63,6 +63,14 @@
             "IsLateral": false,
             "department": "Ai&DS",
             "ID": "8"
+        },
+        {
+            "User name": "20L31A5401",
+            "Password": "bharath@123",
+            "20L31A5401": "Bharath chandu",
+            "IsLateral": false,
+            "department": "Ai&DS",
+            "ID": "9"
         }
     ]
 }
